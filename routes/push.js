@@ -52,6 +52,8 @@ router.post("/", function (req, res, next) {
     validate();
 });
 router.post("/multicast", function (req, res, next) {
+    //@ts-ignore
+    // My custom validation.
     req.checkBody('registrationTokens', 'request for registrationTokens').notEmpty().isArray();
     req.checkBody('data', 'request for data as json object').optional();
     req.checkBody('notification', 'request for notification as json object `title, body, badge`').optional();
