@@ -1,0 +1,26 @@
+{
+  "name": "stalk-fcm-admin-interface",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=production PORT=9001 node ./bin/www",
+    "dev": "NODE_ENV=development PORT=9001 nodemon ./bin/www",
+    "deploy": "NODE_ENV=production PORT=9001 pm2 start ./bin/www --name stalk-fcm-admin"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "^2.6.9",
+    "express": "^4.16.3",
+    "express-validator": "^3.2.1",
+    "firebase-admin": "^5.12.1",
+    "morgan": "~1.8.1",
+    "pug": "^2.0.3",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/express-validator": "^3.0.0",
+    "@types/node": "^8.10.21"
+  }
+}
